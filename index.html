@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🛫TRAVEL WITH OMM✈🌍</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+  <div id="toast" class="toast" style="display:none;">✅ Booking Confirmed!</div>
+
+  <header class="navbar">
+    <h1 class="logo" style="color: white;">🛫 Travel with Omm ✈🌍</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <form class="search-form" action="/search" method="get">
+            <input type="search" id="search-bar" name="q" placeholder="Search..." />
+            <button type="submit">🔍</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section id="home" class="hero">
+    <img src="aeroplane.png" alt="Airplane" class="airplane" />
+    <div class="hero-content">
+      <h2>Explore the World with Us</h2>
+      <p>Discover breathtaking places and unforgettable experiences</p>
+      <button onclick="scrollToSection('packages')">Book Now</button>
+      <button id="darkModeToggle">🌙Toggle Dark Mode</button>
+      <script>
+        const toggleButton = document.getElementById("darkModeToggle");
+        toggleButton.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+        });
+      </script>
+
+
+    </div>
+  </section>
+
+
+  <section id="destinations" class="section">
+    <h2>🌍 Popular World Destinations</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="destination-card">
+          <img src="paris.jpg" alt="Paris" />
+          <h3>Paris, France</h3>
+          <p>Experience romance and culture in the City of Lights.</p>
+        </div>
+        <div class="destination-card">
+          <img src="bali.jpg" alt="Bali" />
+          <h3>Bali, Indonesia</h3>
+          <p>Relax on pristine beaches and explore lush jungles.</p>
+        </div>
+        <div class="destination-card">
+          <img src="newyork.jpg" alt="New York" />
+          <h3>New York, USA</h3>
+          <p>The city that never sleeps awaits your adventure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🏝 Odisha's Most Famous Destinations</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="destination-card">
+          <img src="puri.jpg" alt="Puri" />
+          <h3>Puri, Odisha</h3>
+          <p>Experience the serene beaches and the famous Jagannath Temple.</p>
+        </div>
+        <div class="destination-card">
+          <img src="deomali.jpg" alt="Deomali" />
+          <h3>Deomali, Odisha</h3>
+          <p>Discover the highest peak of Odisha and its breathtaking views.</p>
+        </div>
+        <div class="destination-card">
+          <img src="chilika.jpg" alt="Chilika" />
+          <h3>Chilika Lake</h3>
+          <p>A scenic lake and sanctuary for migratory birds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>⛰ Waterfalls & Mountain Trips</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="destination-card">
+          <img src="bhimkund.png" alt="Bhimkund" />
+          <h3>Bhimkund</h3>
+          <p>Explore the legendary waterfall linked to warrior Bhim.</p>
+        </div>
+        <div class="destination-card">
+          <img src="daringbadi.jpg" alt="Daringbadi" />
+          <h3>Daringbadi</h3>
+          <p>Known as the Kashmir of Odisha for its cool climate and scenic beauty.</p>
+        </div>
+        <div class="destination-card">
+          <img src="nursingha.jpg" alt="Nursinghanath" />
+          <h3>Nursinghanath Temple</h3>
+          <p>Visit the revered temple and enjoy its peaceful surroundings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🌳 Most Popular National Park</h2>
+    <div class="destination-card">
+      <img src="similipala.jpg" alt="Similipal National Park" />
+      <h3>Similipal, Odisha</h3>
+      <p>Discover Similipal National Park, rich in flora and fauna.</p>
+    </div>
+  </section>
+
+
+  <section id="packages" class="section packages">
+    <h2>💼 Our Travel Packages</h2>
+    <div class="packages-grid">
+      <div class="package-card">
+        <img src="djxc.png" alt="Luxury Escape" />
+        <h3>Luxury Escape</h3>
+        <p>7 days / 6 nights in premium hotels</p>
+        <p>From <strong>💸 10k</strong></p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="mountain.jpg" alt="Adventure Tour" />
+        <h3>Adventure Tour</h3>
+        <p>5 days / 4 nights with thrilling activities</p>
+        <p>From <strong>💸 7.5k</strong></p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="zx.png" alt="Family Getaway" />
+        <h3>Family Getaway</h3>
+        <p>6 days / 5 nights of family-friendly fun</p>
+        <p>From <strong>💸 5.5k</strong></p>
+        <button>Book Now</button>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    // Booking Form Handler
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const spinner = document.getElementById("bookingSpinner");
+      const status = document.getElementById("bookingStatus");
+      spinner.style.display = "block";
+      status.textContent = "";
+
+      setTimeout(() => {
+        spinner.style.display = "none";
+        status.textContent = "✅ Booking Confirmed! We’ll contact you soon.";
+        status.classList.add("fade-in");
+      }, 1500);
+    });
+
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const status = document.getElementById("statusMessage");
+      status.textContent = "📩 Message Sent Successfully!";
+      status.classList.add("fade-in");
+    });
+  </script>
+  <section id="book" class="section booking">
+    <div class="spinner" id="bookingSpinner"></div>
+    <h2>🗓 Book Your Travel Slot</h2>
+
+    <form id="bookingForm" novalidate>
+      <input type="text" id="fullName" name="fullName" placeholder="Full Name" required />
+      <input type="email" id="gmail" name="gmail" placeholder="Gmail ID" required />
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number" pattern="[0-9]{10}" required />
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required />
+
+      <select id="package" name="package" required>
+        <option value="">Select Package</option>
+        <option value="Luxury Escape">Luxury Escape</option>
+        <option value="Adventure Tour">Adventure Tour</option>
+        <option value="Family Getaway">Family Getaway</option>
+      </select>
+
+      <input type="date" id="travelDate" name="travelDate" required />
+
+      <button type="submit">Confirm Booking</button>
+      <div class="status" id="bookingStatus"></div>
+    </form>
+  </section>
+
+
+  <section id="services" class="section services">
+    <h2>🧭 Our Services</h2>
+
+    <div class="services-container">
+      <div class="service-card">
+        <img src="hotel.jpg" alt="Comfortable Stays">
+        <h3>Comfortable Stays</h3>
+        <p>Premium hotels and cozy resorts for a relaxing experience throughout your journey.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="food.jpg" alt="Delicious Cuisine">
+        <h3>Delicious Cuisine</h3>
+        <p>Enjoy local and international dishes with curated dining experiences at every stop.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="tracking.jpg" alt="Adventure Activities">
+        <h3>Fun & Adventure</h3>
+        <p>Thrilling activities like trekking, boating, and sightseeing to keep your trip exciting.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="nightlife.webp" alt="Nightlife and Parties">
+        <h3>Nightlife & Parties</h3>
+        <p>Unwind with vibrant parties, music, and entertainment in safe and lively venues.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="section contact">
+    <h2>📞 Contact Us</h2>
+    <p>Have questions or need help planning your trip? Reach out to us!</p>
+
+    <form id="contactForm" novalidate>
+      <input type="text" id="contactName" name="contactName" placeholder="Your Name" required />
+      <input type="email" id="contactEmail" name="contactEmail" placeholder="Your Email" required />
+      <textarea id="contactMessage" name="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+      <div class="status" id="statusMessage"></div>
+    </form>
+
+    <div class="contact-details">
+      <p>📍 Address: Omm Tours & Travels, Salipur,cuttack, Odisha</p>
+      <p>📧 Email: ommshree7794@gmail.com</p>
+      <p>📱 Phone: +91 9777788888</p>
+    </div>
+  </section>
+
+  <section id="aboutus" class="section about-us">
+    <h2>👥 About Us</h2>
+    <div class="about-content">
+      <p>WanderWorld Travel is your trusted companion in discovering the beauty of the world. With years of experience
+        in curating unforgettable journeys, we specialize in personalized travel packages, cultural immersion, and
+        adventure-filled itineraries.</p>
+      <p>Our mission is to make travel accessible, enjoyable, and memorable for everyone. Whether you're seeking luxury,
+        thrill, or family fun, we’ve got the perfect plan for you.</p>
+      <p>Join thousands of happy travelers who’ve explored the world with us!</p>
+    </div>
+  </section>
